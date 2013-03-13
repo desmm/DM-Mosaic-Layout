@@ -23,11 +23,52 @@ html {height:100%;}
 body{font-family:"Helvetica Neue",sans-serif;height:100%;color: #FFFFFF;}
 
 
+/* ==== ANIMAZIONE ==== */
+.mosaicLayout li div{-webkit-transition:all 0.2s ease-in-out ;-moz-transition:all 0.2s ease-in-out ;-o-transition:all 0.2s ease-in-out ;transition:all 0.2s ease-in-out ;}
 
 
+body{padding:20px;font-family: Helvetica,sans-serif;color:#000000;}
 
-.mosaicLayout{margin: 5px;}
+.mosaicLayout{margin: 0 auto;}
 
-.mosaicLayout li{height: 305px;width: 305px; float: left;position: relative;background: gray;}
-.mosaicLayout li div{position: absolute;top:-5px;left:-5px;border:5px solid white;min-width: 300px; min-height: 300px;}
+.mosaicLayout li{height:300px;width:305px; float: left;position: relative;}
 .mosaicLayout li:hover{z-index: 100;}
+.mosaicLayout li .item{position: absolute;top:0;left:5px;border:5px solid white;max-width: 320px;max-height: 320px;overflow: hidden;height: auto;}
+.mosaicLayout li .item img{display: block;}
+.mosaicLayout li:hover .item{z-index: 100;border:8px solid white;top:-3px;left:0px;box-shadow:0 0 35px rgba(0,0,0,0.60);max-width:800px;max-height: 800px;}
+.mosaicLayout li .item .info{background:#FFFFFF;padding:20px; position: absolute;bottom: -80px;left: 0px;}
+.mosaicLayout li .item .info h2{font-size: 14px;font-weight: bold;}
+.mosaicLayout li .item .info .author{font-size: 12px;color: #999999;}
+.mosaicLayout li:hover .info{bottom: 0px;}
+
+
+
+/*1280*/
+@media screen and (min-width: 0) and (max-width: 1020px) {	
+	.mosaicLayout{width: 610px}
+	.it02,.it04,.it06,.it08,.it10,.it12{right: 0px;left: auto!important;}	
+	/*
+	body{background: yellow!important}
+	*/
+}
+
+
+
+@media screen and (min-width: 1020px) and (max-width: 1520px) {	
+	.mosaicLayout{width: 915px}
+	.it03,.it06,.it09,.it12{right: 0px;left: auto!important;}	
+	/*	
+	body{background: red!important}
+	*/
+}
+
+
+/*1280*/
+@media screen and (min-width: 1520px) {	
+	.mosaicLayout{width: 1220px}
+	.it04,.it08,.it12{right: 0px;left: auto!important;}	
+	/*
+	body{background: blue!important}
+	*/
+}
+
